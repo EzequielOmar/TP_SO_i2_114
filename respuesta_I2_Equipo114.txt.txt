@@ -17,3 +17,72 @@ a-
 b-si, ALFA puede actualizar su Fork al estado del fork de GAMMA.
 c-si.
 d-si.
+e- secuencia de comandos:
+
+[Vicente Montilla] *crea repo
+[Marcos Sopelana] * hace fork
+[Marcos Sopelana] git clone *nombrerepo
+[Marcos Sopelana] *modifica archivos de forma local
+[Marcos Sopelana] git add .
+[Marcos Sopelana] git commit -m ""
+[Marcos Sopelana] git push
+[Ezequiel Vazquez] * hace fork a repo de Marcos
+[Ezequiel Vazquez] git clone *nombrerepopropio
+[Ezequiel Vazquez] *modifica archivos de forma local
+[Ezequiel Vazquez] git add .
+[Ezequiel Vazquez] git commit -m ""
+[Ezequiel Vazquez] git push
+[Vicente Montilla] git remote add upstream *repo de Ezequiel
+[Vicente Montilla] git fetch upstream
+[Vicente Montilla] git checkout master
+[Vicente Montilla] git rebase upstream/master
+[Vicente Montilla] git push -f origin master
+[Vicente Montilla] *modifica archivos
+[Vicente Montilla] git add .
+[Vicente Montilla] git commit -m ""
+[Vicente Montilla] git push master
+[Marcos Sopelana y Ezequiel Vazquez] git remote add upstream *repo de Vicente
+[Marcos Sopelana y Ezequiel Vazquez] git fetch upstream
+[Marcos Sopelana y Ezequiel Vazquez] git checkout master
+[Marcos Sopelana y Ezequiel Vazquez] git rebase upstream/master
+[Marcos Sopelana y Ezequiel Vazquez] git push -f origin master
+[Vicente Montilla] git remote add upstream *repo de Ezequiel
+[Vicente Montilla] git fetch upstream
+[Vicente Montilla] git checkout master
+[Vicente Montilla] git rebase upstream/master
+[Vicente Montilla] git push -f origin master
+
+*a esta altura los tres tienen el repositorio actualizado en la misma instancia
+*se repite el proceso para responder las preguntas*
+
+[Vicente Montilla] *modifica archivos
+[Vicente Montilla] git add .
+[Vicente Montilla] git commit -m ""
+[Vicente Montilla] git push master
+[Marcos Sopelana] git remote add upstream *repo de Ezequiel
+[Marcos Sopelana] git fetch upstream
+[Marcos Sopelana] git checkout master
+[Marcos Sopelana] git rebase upstream/master
+[Marcos Sopelana] git push -f origin master
+[Marcos Sopelana] *modifica archivos
+[Marcos Sopelana] git add .
+[Marcos Sopelana] git commit -m ""
+[Marcos Sopelana] git push master
+[Vicente Montilla] git remote add upstream *repo de Ezequiel
+[Vicente Montilla] git fetch upstream
+[Vicente Montilla] git checkout master
+[Vicente Montilla] git rebase upstream/master
+[Vicente Montilla] git push -f origin master
+[Vicente Montilla] *modifica archivos
+[Vicente Montilla] git add .
+[Vicente Montilla] git commit -m ""
+[Vicente Montilla] git push master
+[Ezequiel Vazquez] git remote add upstream *repo de Ezequiel
+[Ezequiel Vazquez] git fetch upstream
+[Ezequiel Vazquez] git checkout master
+[Ezequiel Vazquez] git rebase upstream/master
+[Ezequiel Vazquez] git push -f origin master
+[Ezequiel Vazquez] *modifica archivos
+[Ezequiel Vazquez] git add .
+[Ezequiel Vazquez] git commit -m ""
+[Ezequiel Vazquez] git push master
